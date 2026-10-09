@@ -303,13 +303,8 @@ The analysis is primarily implemented using:
 ```text
 customer-360-data-quality/
 │
-├── data/
-│   └── README.md
-│
 ├── notebooks/
 │   └── customer_360_data_quality_profiling.ipynb
-│
-├── profiling/
 │
 ├── reports/
 │   ├── DQ_Issue_Register.xlsx
@@ -321,44 +316,32 @@ customer-360-data-quality/
 │
 ├── .gitignore
 └── README.md
+```
 
+### Directory Purpose
 
-### One small point
+| Directory / File | Purpose |
+|---|---|
+| `notebooks/` | Contains the primary Data Quality profiling and investigation notebook. |
+| `reports/` | Contains the Data Quality Issue Register and Data Quality Scorecard. |
+| `rules/` | Contains the Business Rule Catalogue and Profiling Evidence Register. |
+| `.gitignore` | Specifies files and file types that Git should ignore. |
+| `README.md` | Describes the business context, project objectives, methodology, and deliverables. |
 
-You currently have an empty `profiling/` folder.
-
-That's okay. We're documenting it as a **reserved area**, rather than pretending it already contains profiling outputs.
-
-Also, the `data/README.md` shown in this structure **doesn't exist yet**. We're planning to create it later, before publishing the repository. It will explain the datasets without uploading the raw CSV files.
-
-So don't create `data/README.md` yet.
-
-Save the README.
-
-Next we'll add **Limitations**, which is important because it demonstrates professional judgment about what this assessment does and does not establish.
+The raw CSV datasets are retained locally and excluded from the public repository.
 
 ## Limitations
 
 The following limitations apply to this assessment:
 
-- The underlying datasets are synthetic and are intended to simulate realistic
-  enterprise Data Quality challenges.
-- Business rules and Data Quality expectations are defined for the purpose of
-  this assessment and may require validation against actual organizational
-  policies in a production environment.
-- Profiling observations are not automatically treated as confirmed Data
-  Quality defects without appropriate business context and rule validation.
-- Accuracy cannot be fully established through data profiling alone and may
-  require comparison with authoritative source systems or external reference
-  data.
-- Business impact assessments represent potential impact based on the
-  available data and identified dependencies and may require confirmation
-  with business and application owners.
-- The assessment focuses on profiling and investigation of the source data;
-  production remediation and operational Data Quality monitoring are outside
-  the current scope.
+- The underlying datasets are synthetic and are intended to simulate realistic enterprise Data Quality challenges.
+- Business rules and Data Quality expectations are defined for the purpose of this assessment and may require validation against actual organizational policies in a production environment.
+- Profiling observations are not automatically treated as confirmed Data Quality defects without appropriate business context and rule validation.
+- Accuracy cannot be fully established through data profiling alone and may require comparison with authoritative source systems or external reference data.
+- Business impact assessments represent potential impact based on the available data and identified dependencies and may require confirmation with business and application owners.
+- The assessment focuses on profiling and investigation of the source data; production remediation and operational Data Quality monitoring are outside the current scope.
 
-  ## Future Enhancements
+## Future Enhancements
 
 Potential future extensions of the assessment include:
 
@@ -380,6 +363,4 @@ Potential future extensions of the assessment include:
 
 **Current stage:** Enterprise Data Profiling and Data Quality Assessment
 
-The project currently focuses on source-data understanding, profiling,
-Data Quality investigation, business-rule validation, issue documentation,
-and assessment of potential business impact.
+The project currently focuses on source-data understanding, profiling, Data Quality investigation, business-rule validation, issue documentation, and assessment of potential business impact.
